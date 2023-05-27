@@ -15,7 +15,7 @@
 
 
 <br><br>
-# 큐(Queue)
+# 큐(Queue) #큐
 ### 먼저 집어 넣은 데이터가 먼저 나오는 FIFO(First In First Out) 구조
 ### 배열X 연결리스트로 구현
 
