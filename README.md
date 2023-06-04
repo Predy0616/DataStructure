@@ -14,8 +14,8 @@
 # **자료구조**
 ### [1. 큐](#큐-queue)
 ### [2. 스택](#스택-stack)
-### 3. 트리
-### 4. 그래프
+### 3. 그래프
+### [4. 트리](#트리-tree)
 ### 5. 우선순위 큐
 ### 6. 힙
 
@@ -330,4 +330,92 @@ int main() {
 }
 ```
 
+<br><br>
+# **트리 (Tree)**
+### 그래프의 일종으로, 한 노드에서 시작해서 다른 정점들을 순회하여 자기 자신에게 돌아오는 순환이 없는 연결 그래프
+### 배열X 연결리스트로 구현
+
+### **C**
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+typedef struct Node
+{
+	int data, depth;
+	Node* left;
+	Node* right;
+} Node;
+
+/*
+Node* queue[100];
+int rear=0, front=0;
+
+void printTree(Node* N) {
+	queue[rear++] = N;
+	while (rear == front) {
+		Node* now = queue[front++];
+		if (now->left != NULL) {
+			queue[rear++] = now->left;
+			
+		}
+		if (now->right != NULL) {
+			queue[rear++] = now->right;
+
+		}
+
+	}
+
+	return;
+}
+*/
+
+int main() {
+	Node* root = (Node*)malloc(sizeof(Node));
+	root->data = 1;
+	root->left->data = 2;
+	root->right->data = 3;
+	root->left->left->data = 4;
+	root->left->right->data = 5;
+	root->right->left->data = 6;
+	root->right->right->data = 7;
+
+	return 0;
+}
+
+/*
+typedef struct Tree {
+	Node* root;
+	Node* last;
+	int size;
+
+} Tree;
+
+void init(Tree* t) {
+	Node* newNode = (Node*)malloc(sizeof(Node));
+	t->root = newNode;
+	t->root->left = NULL;
+	t->root->right = NULL;
+	t->last = t->root;
+	t->size = 1;
+}
+
+void insert(Tree* t, int data) {
+	Node* newNode = (Node*)malloc(sizeof(Node));
+	if (t->last->data == NULL) {
+		t->last->data = data;
+		t->last->left = newNode;
+	}
+	else if (t->last->left->data == NULL) {
+		t->last->left->data = data;
+		t->last->right = newNode;
+	}
+	else if (t->last->right->data == NULL) {
+		t->last->right->data = data;
+		if(t.last)
+	}
+
+}
+*/
+```
 
