@@ -23,7 +23,7 @@
 # **큐 (Queue)**
 ### 먼저 집어 넣은 데이터가 먼저 나오는 FIFO(First In First Out) 구조
 ### 배열X 연결리스트로 구현
-
+### [C언어](https://github.com/Predy0616/DataStructure/blob/main/Queue.c)
 ### **C**
 ```c
 #include<stdio.h>
